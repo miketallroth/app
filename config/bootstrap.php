@@ -213,6 +213,8 @@ Type::build('datetime')
  * Plugin::load('Migrations'); //Loads a single plugin named Migrations
  *
  */
+Plugin::load('Acl', ['bootstrap' => true]);
+Plugin::load('Croogo/Core', ['bootstrap' => true, 'routes' => true]);
 
 /*
  * Only try to load DebugKit in development mode
