@@ -7,6 +7,14 @@ if (file_exists(APP . 'Config' . DS . 'croogo.php')) {
 		define('LOG_ERROR', LOG_ERR);
 	}
 
+	$cacheDefaultConfig = array(
+		'duration' => '+1 hour',
+		'engine' => $cacheDefaultEngine,
+		'prefix' => $cacheDefaultPrefix,
+		'duration' => $duration,
+	);
+	Configure::write('Cache.defaultConfig', $cacheDefaultConfig);
+
 	Configure::write('Error', array(
 		'handler' => 'ErrorHandler::handleError',
 		'level' => E_ALL & ~E_DEPRECATED,
