@@ -9,9 +9,8 @@ if (file_exists(APP . 'Config' . DS . 'croogo.php')) {
 
 	$cacheDefaultConfig = array(
 		'duration' => '+1 hour',
-		'engine' => $cacheDefaultEngine,
-		'prefix' => $cacheDefaultPrefix,
-		'duration' => $duration,
+		'engine' => 'File',
+		'prefix' => 'croogo_install_',
 	);
 	Configure::write('Cache.defaultConfig', $cacheDefaultConfig);
 
