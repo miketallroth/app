@@ -220,5 +220,6 @@ Plugin::load('Croogo/Core', ['bootstrap' => true, 'routes' => true]);
  * Debug Kit should not be installed on a production system
  */
 if (Configure::read('debug')) {
+    Plugin::load('Migrations');
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
